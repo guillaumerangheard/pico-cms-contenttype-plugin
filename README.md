@@ -5,4 +5,6 @@ What it does is that it basically allows one to serve any (MIME) type of file ba
 
 There are a couple of ways you can use this plugin:
 
-Let's say you have a JSON file called `database.json` and want it delivered as JSON. All you have to do is to rename it `database.json.md`, so it would be rendered by Pico, and upload it to your `content` folder, or any subfolder thereof.
+Let's say you have a JSON file called `database.json` and want it delivered as JSON. All you have to do is to rename it `database.json.md`, so it would be rendered by Pico, and upload it to your `content` folder, or any subfolder thereof. Now, when your users go to http://yoursite.com/path/to/database.json, they would get exactly what they expect, that is a JSON file.
+
+Now, let's say that you want `extensionlessFile` to be delivered as XML. All you have to do is to prepend a YAML header to it, as you would to any regular Pico page, and add a `ContentType: xml` entry to it. Then, when your users go to http://yoursite.com/path/to/extensionlessFile, they would get XML.
